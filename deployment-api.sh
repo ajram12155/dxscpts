@@ -9,4 +9,4 @@ scp -r target/digitalexchange-*.war /opt/tomcat/webapps/de.war
 
 cd /opt/tomcat
 
-. /bin/startup.sh
+./bin/startup.sh
