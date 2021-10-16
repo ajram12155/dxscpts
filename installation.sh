@@ -75,9 +75,10 @@ rm -f apache-tomcat-9.0.8.tar.gz
     echo 'mysql version'
     mysql --version
 mysql -uroot  <<MY_QUERY
+CREATE DATABASE exc;
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'techmango';
 create user 'dcuat'@'%' identified by 'techmango';
-CREATE DATABASE exc;
+grant all privileges on exc.* to 'dcuat'@'%';
 flush privileges;
 MY_QUERY
    #ALTER USER 'root'@'localhost' IDENTIFIED BY 'NewPassword';
